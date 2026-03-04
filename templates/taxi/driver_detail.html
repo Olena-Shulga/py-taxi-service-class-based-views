@@ -13,12 +13,14 @@
         <tr>
           <th scope="col">ID</th>
           <th scope="col">Model</th>
+          <th scope="col">Manufacturer</th>
         </tr>
       </thead>
       {% for car in driver.cars.all %}
         <tr>
           <td><a href="{{ car.get_absolute_url }}">{{ car.id }}</a></td>
           <td>{{ car.model }}</td>
+          <td>{{ car.manufacturer }}</td>
         </tr>
       {% endfor %}
       </table>
